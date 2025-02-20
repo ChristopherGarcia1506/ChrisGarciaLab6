@@ -7,16 +7,103 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="196dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="140dp"
-        android:text="Fragment 1"
-        android:textColor="@color/black"
-        android:textFontWeight="@integer/material_motion_duration_medium_2"
-        android:textSize="20sp"
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="300dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="52dp"
+
+        android:layout_marginTop="88dp"
+        android:background="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/FullName"
+        android:textColor="@color/tabIndicatorColor"
+        android:textFontWeight="600"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="164dp"
+        android:text="Select Your Color:"
+        android:textColor="@color/colorblue"
+        android:textSize="15dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textColor="@color/colorGreen"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yellow"
+            android:textColor="@color/colorYellow"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Red"
+            android:textColor="@color/tabIndicatorColor"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="343dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="384dp"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

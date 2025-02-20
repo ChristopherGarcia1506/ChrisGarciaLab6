@@ -28,10 +28,10 @@ public class ChrisActivity6 extends AppCompatActivity {
         fragmentList.add(new LeftCh());
         fragmentList.add(new RIghtGa());
 
-        ViewPager2 viewPager = findViewById(R.id.viewPager);
+        ViewPager2 viewPager = findViewById(R.id.ChrviewPager);
         viewPager.setAdapter(new ViewPagerAdapter(this, fragmentList));
 
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        TabLayout tabLayout = findViewById(R.id.ChrtabLayout);
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
                     // Customize the tab name based on position/index

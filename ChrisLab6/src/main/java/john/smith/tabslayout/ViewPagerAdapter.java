@@ -1,4 +1,8 @@
-package john.smith.tabslayout;
+/*
+ * Chris Garcia
+ * n01371506
+ * Section:0CB
+ * */package john.smith.tabslayout;
 
 // ViewPagerAdapter.java
 import androidx.fragment.app.Fragment;

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">TabsLayout</string>
     <string name="hello_blank_fragment">Bonjour fragment vierge</string>
     <string name="FullName">Chris Garcia</string>
     <string name="noSportSelected">"  pas de sport"</string>
+
+
+    <string name="requestkey">cléDeDemande</string>
+    <string name="bundleKey">texteSélectionné</string>
+    <string name="no_data_passed">AUCUNE DONNÉE PASSÉE</string>
+    <string name="basketball">Basket-ball</string>
+    <string name="baseball">Base-ball</string>
+    <string name="sport">SPORT</string>
+    <string name="submit">Soumettre</string>
+    <string name="other">Autre</string>
+    <string name="red">Rouge</string>
+    <string name="yellow">Jaune</string>
+    <string name="green">Vert</string>
+    <string name="select_your_color">Sélectionnez votre couleur :</string>
+    <string name="hockey">Hockey</string>
 </resources>

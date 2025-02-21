@@ -5,6 +5,7 @@
  * */
 package john.smith.tabslayout;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -84,9 +85,27 @@ public class RIghtGa extends Fragment {
             @Override
             public void onClick(View view) {
 
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setMessage("Sports Selected");
+                builder.setPositiveButton("Ok", (dialog, which) -> dialog.dismiss());
+                builder.setCancelable(false);
+
+                builder.show();
+
+
             }
         });
 
         return view;
     }
+//    private void alertPopUp () {  // alert popup settings
+//        new AlertDialog.Builder(this)
+//                .setTitle(R.string.Title)
+//                .setIcon(R.drawable.exit)
+//                .setMessage(R.string.message)
+//                .setPositiveButton(R.string.positive, (dialog, which) -> finish())
+//                .setNegativeButton(R.string.negative, (dialog, which) -> dialog.dismiss())
+//                .setCancelable(false)
+//                .show();
+//    }
 }

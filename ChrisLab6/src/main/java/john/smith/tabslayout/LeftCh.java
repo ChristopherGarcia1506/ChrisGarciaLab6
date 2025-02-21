@@ -74,25 +74,25 @@ public class LeftCh extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        //---Assigning RadioGroup and button Objects to Variables ---
         radioGroup = view.findViewById(R.id.RadioGroup);
         btn1 = view.findViewById(R.id.button);
+
+        //---On Button Clicked Actions
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                int selectedRadioBtnId = radioGroup.getCheckedRadioButtonId();
-                RadioButton selectedRadioButton = radioGroup.findViewById(selectedRadioBtnId);
-                String selectedColor = selectedRadioButton.getText().toString();
-                Toast.makeText(getActivity(),selectedColor,Toast.LENGTH_LONG).show();
+                int selectedRadioBtnId = radioGroup.getCheckedRadioButtonId(); //retrieving ID of selected Button
+                RadioButton selectedRadioButton = radioGroup.findViewById(selectedRadioBtnId);//retrieving properties of Selected RadioButton
+                String selectedBtnText = selectedRadioButton.getText().toString();
+                Toast.makeText(getActivity(),selectedBtnText,Toast.LENGTH_LONG).show();
 
-                Fragment definitionFragmentChris = new RIghtGa();
                 Bundle bundle = new Bundle();
-                bundle.putString("key",selectedColor);
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.ChrviewPager,definitionFragmentChris)
-                        .addToBackStack(null)
-                        .commit();
+                bundle.putString(getString(R.string.bundleKey), selectedBtnText);
+                RIghtGa secondFragment = new RIghtGa();
+                getParentFragmentManager().setFragmentResult(getString(R.string.requestkey), bundle);
+
 
             }
         });

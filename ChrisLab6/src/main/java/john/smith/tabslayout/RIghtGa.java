@@ -10,7 +10,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
-import android.text.Selection;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +59,9 @@ public class RIghtGa extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        Bundle arguments = getArguments();
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -72,21 +75,15 @@ public class RIghtGa extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
+        //--CheckBox Declaration---
         CheckBox checkBox1 = view.findViewById(R.id.checkBox);
         CheckBox checkBox2 = view.findViewById(R.id.checkBox2);
         CheckBox checkBox3 = view.findViewById(R.id.checkBox3);
 
+        //-- Assigning Textview Object to variable
         TextView Tab2Text = view.findViewById(R.id.Tab2TexView);
 
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            String selection = bundle.getString("key");
-            Tab2Text.setText(selection);
-        }
-
-
-
-
+        //--- Logic for CheckBoxes---
         button2 = view.findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,20 +96,16 @@ public class RIghtGa extends Fragment {
                     if(checkBox2.isChecked()) CheckedBoxes += checkBox2.getText().toString()+ "\n\n";
                     if(checkBox3.isChecked()) CheckedBoxes += checkBox3.getText().toString() +"\n\n";
                 } else {
-                    CheckedBoxes = " NO SPORT";
+                    CheckedBoxes = getString(R.string.noSportSelected);
 
                 }
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Sports Selected");
                 builder.setIcon(R.drawable.brazuca);
                 builder.setMessage(CheckedBoxes);
                 builder.setPositiveButton("Ok", (dialog, which) -> dialog.dismiss());
                 builder.setCancelable(false);
-
                 builder.show();
-
-
             }
         });
 

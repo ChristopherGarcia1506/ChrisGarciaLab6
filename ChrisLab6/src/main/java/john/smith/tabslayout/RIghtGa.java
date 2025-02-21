@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 /**
@@ -23,7 +24,6 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class RIghtGa extends Fragment {
-
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -63,6 +63,7 @@ public class RIghtGa extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -70,6 +71,10 @@ public class RIghtGa extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
+
+        CheckBox checkBox1 = view.findViewById(R.id.checkBox);
+        CheckBox checkBox2 = view.findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = view.findViewById(R.id.checkBox3);
 
         TextView Tab2Text = view.findViewById(R.id.Tab2TexView);
 
@@ -80,13 +85,28 @@ public class RIghtGa extends Fragment {
         }
 
 
+
+
         button2 = view.findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                String CheckedBoxes = "";
+                if(checkBox1.isChecked() || checkBox2.isChecked() || checkBox3.isChecked()){
+
+                    if(checkBox1.isChecked()) CheckedBoxes += checkBox1.getText().toString() + "\n\n";
+                    if(checkBox2.isChecked()) CheckedBoxes += checkBox2.getText().toString()+ "\n\n";
+                    if(checkBox3.isChecked()) CheckedBoxes += checkBox3.getText().toString() +"\n\n";
+                } else {
+                    CheckedBoxes = " NO SPORT";
+
+                }
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setMessage("Sports Selected");
+                builder.setTitle("Sports Selected");
+                builder.setIcon(R.drawable.brazuca);
+                builder.setMessage(CheckedBoxes);
                 builder.setPositiveButton("Ok", (dialog, which) -> dialog.dismiss());
                 builder.setCancelable(false);
 
@@ -98,14 +118,4 @@ public class RIghtGa extends Fragment {
 
         return view;
     }
-//    private void alertPopUp () {  // alert popup settings
-//        new AlertDialog.Builder(this)
-//                .setTitle(R.string.Title)
-//                .setIcon(R.drawable.exit)
-//                .setMessage(R.string.message)
-//                .setPositiveButton(R.string.positive, (dialog, which) -> finish())
-//                .setNegativeButton(R.string.negative, (dialog, which) -> dialog.dismiss())
-//                .setCancelable(false)
-//                .show();
-//    }
 }

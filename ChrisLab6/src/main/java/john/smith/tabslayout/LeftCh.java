@@ -90,7 +90,7 @@ public class LeftCh extends Fragment {
                 bundle.putString("key",selectedColor);
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_container,definitionFragmentChris)
+                        .replace(R.id.ChrviewPager,definitionFragmentChris)
                         .addToBackStack(null)
                         .commit();
 

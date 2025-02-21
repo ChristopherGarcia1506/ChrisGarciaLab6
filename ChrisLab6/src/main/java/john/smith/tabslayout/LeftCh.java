@@ -75,8 +75,8 @@ public class LeftCh extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         //---Assigning RadioGroup and button Objects to Variables ---
-        radioGroup = view.findViewById(R.id.RadioGroup);
-        btn1 = view.findViewById(R.id.button);
+        radioGroup = view.findViewById(R.id.CHRRadioGroup);
+        btn1 = view.findViewById(R.id.CHRbutton);
 
         //---On Button Clicked Actions
         btn1.setOnClickListener(new View.OnClickListener() {

@@ -9,7 +9,7 @@
 
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/CHRview"
         android:layout_width="300dp"
         android:layout_height="5dp"
         android:layout_marginStart="52dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/CHRtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
@@ -34,12 +34,12 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/CHRtextView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="164dp"
-        android:text="Select Your Color:"
+        android:text="@string/select_your_color"
         android:textColor="@color/colorblue"
         android:textSize="15dp"
         android:textStyle="italic|bold"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:id="@+id/RadioGroup"
+        android:id="@+id/CHRRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -57,38 +57,38 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/CHRradioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Green"
+            android:text="@string/green"
             android:textColor="@color/colorGreen"
             android:textStyle="bold"
             android:checked="true"
             android:layout_marginBottom="8dp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/CHRradioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yellow"
+            android:text="@string/yellow"
             android:textColor="@color/colorYellow"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/CHRradioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="Red"
+            android:text="@string/red"
             android:textColor="@color/tabIndicatorColor"
             android:textStyle="bold" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/CHRradioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Other"
+            android:text="@string/other"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -96,12 +96,12 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/CHRbutton"
         android:layout_width="343dp"
         android:layout_height="54dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="384dp"
-        android:text="Submit"
+        android:text="@string/submit"
         android:textColor="@color/white"
         android:background="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"

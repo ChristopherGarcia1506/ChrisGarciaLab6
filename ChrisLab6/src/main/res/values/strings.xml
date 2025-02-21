@@ -10,4 +10,15 @@
     <string name="noSportSelected">" NO SPORT"</string>
     <string name="requestkey">requestKey</string>
     <string name="bundleKey">selectedText</string>
+    <string name="no_data_passed">NO DATA PASSED</string>
+    <string name="basketball">BasketBall</string>
+    <string name="baseball">Baseball</string>
+    <string name="sport">SPORT</string>
+    <string name="submit">Submit</string>
+    <string name="other">Other</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
+    <string name="select_your_color">Select Your Color:</string>
+    <string name="hockey">Hockey</string>
 </resources>

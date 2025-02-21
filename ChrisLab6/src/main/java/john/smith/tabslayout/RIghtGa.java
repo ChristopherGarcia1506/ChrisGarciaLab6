@@ -76,15 +76,15 @@ public class RIghtGa extends Fragment {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
         //--CheckBox Declaration---
-        CheckBox checkBox1 = view.findViewById(R.id.checkBox);
-        CheckBox checkBox2 = view.findViewById(R.id.checkBox2);
-        CheckBox checkBox3 = view.findViewById(R.id.checkBox3);
+        CheckBox checkBox1 = view.findViewById(R.id.CHRcheckBox);
+        CheckBox checkBox2 = view.findViewById(R.id.CHRcheckBox2);
+        CheckBox checkBox3 = view.findViewById(R.id.CHRcheckBox3);
 
         //-- Assigning Textview Object to variable
         TextView Tab2Text = view.findViewById(R.id.Tab2TexView);
 
         //--- Logic for CheckBoxes---
-        button2 = view.findViewById(R.id.button2);
+        button2 = view.findViewById(R.id.CHRbutton2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -9,9 +9,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.Selection;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,6 +31,7 @@ public class RIghtGa extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    Button button2;
 
     public RIghtGa() {
         // Required empty public constructor
@@ -64,6 +68,25 @@ public class RIghtGa extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
+        View view = inflater.inflate(R.layout.fragment_settings, container, false);
+
+        TextView Tab2Text = view.findViewById(R.id.Tab2TexView);
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            String selection = bundle.getString("key");
+            Tab2Text.setText(selection);
+        }
+
+
+        button2 = view.findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        return view;
     }
 }

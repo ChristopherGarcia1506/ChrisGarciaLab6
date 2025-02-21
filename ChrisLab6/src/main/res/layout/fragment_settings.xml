@@ -8,15 +8,68 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/Tab2TexView"
         android:layout_width="197dp"
         android:layout_height="61dp"
-        android:layout_marginStart="98dp"
-        android:layout_marginTop="228dp"
-        android:text="Fragment 2"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="52dp"
+        android:text="Color Selected:"
         android:textColor="@color/black"
         android:textFontWeight="@integer/material_motion_duration_medium_2"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="164dp"
+        android:text="Hockey"
+        android:textColor="@color/black"
+        android:textStyle="italic|bold"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="160dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="196dp"
+        android:text="BasketBall"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="139dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="232dp"
+        android:text="Baseball"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="353dp"
+        android:layout_height="51dp"
+        android:background="@color/colorGreen2"
+        android:text="SPORT"
+        android:textSize="25sp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="340dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

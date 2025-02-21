@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -34,7 +35,7 @@ public class LeftCh extends Fragment {
     private String mParam2;
 
     private Button btn1;
-    private RadioGroup radioButtons;
+    private RadioGroup radioGroup;
 
     public LeftCh() {
         // Required empty public constructor
@@ -65,7 +66,6 @@ public class LeftCh extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
     }
 
     @Override
@@ -74,18 +74,25 @@ public class LeftCh extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-
-        radioButtons = view.findViewById(R.id.RadioGroup);
-
+        radioGroup = view.findViewById(R.id.RadioGroup);
         btn1 = view.findViewById(R.id.button);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                int selectedRadioBtnId = radioButtons.getCheckedRadioButtonId();
-                RadioButton selectedRadioButton = radioButtons.findViewById(selectedRadioBtnId);
+                int selectedRadioBtnId = radioGroup.getCheckedRadioButtonId();
+                RadioButton selectedRadioButton = radioGroup.findViewById(selectedRadioBtnId);
                 String selectedColor = selectedRadioButton.getText().toString();
                 Toast.makeText(getActivity(),selectedColor,Toast.LENGTH_LONG).show();
+
+                Fragment definitionFragmentChris = new RIghtGa();
+                Bundle bundle = new Bundle();
+                bundle.putString("key",selectedColor);
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container,definitionFragmentChris)
+                        .addToBackStack(null)
+                        .commit();
 
             }
         });

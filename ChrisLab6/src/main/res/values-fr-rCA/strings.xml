@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Chris Garcia -->
+<!--n01371506 -->
+<!--Section: 0CB -->
 <resources>
     <string name="app_name">TabsLayout</string>
     <string name="hello_blank_fragment">Bonjour fragment vierge</string>
